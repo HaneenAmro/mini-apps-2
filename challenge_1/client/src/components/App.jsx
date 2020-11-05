@@ -22,10 +22,13 @@ class App extends Component {
     loadEvents() {
         fetch(`http://localhost:3000/events?q=${this.state.term}&_start=${this.state.offset}&_limit=${this.state.limit}`)
             .then(response => {
-                const pages = response.headers.get("X-Total-Count");
-                this.setState({
-                    pageCount: Math.ceil(pages / this.state.limit),
-                });
+                console.log(response)
+                // console.log(response.headers.get("X-Total-Count"))
+                // const pages = response.headers.get("X-Total-Count");
+
+                // this.setState({
+                //     pageCount: Math.ceil(pages / this.state.limit),
+                // });
                 return response.json();
             })
             .then(data =>
@@ -69,9 +72,9 @@ class App extends Component {
                     nextLabel={'next'}
                     breakLabel={'...'}
                     breakClassName={'break-me'}
-                    pageCount={this.state.pageCount}
+                    // pageCount={this.state.pageCount}
                     marginPagesDisplayed={2}
-                    pageRangeDisplayed={5}
+                    pageRangeDisplayed={10}
                     onPageChange={(e) => this.handlePageClick(e)}
                     containerClassName={'pagination'}
                     subContainerClassName={'pages pagination'}
