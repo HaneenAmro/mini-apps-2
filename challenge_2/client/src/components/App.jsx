@@ -34,8 +34,8 @@ class App extends React.Component {
                                 data: values,
                                 fill: true,
                                 lineTension: 0.5,
-                                backgroundColor: "#80d379", 
-                                borderColor: "#d018df",  
+                                backgroundColor: "#80d379",
+                                borderColor: "#d018df",
                                 borderWidth: 3,
                             }
                         ]
@@ -51,14 +51,14 @@ class App extends React.Component {
         return (
             <div>
                 <Line data={this.state.data}
-                  options={{
-                    title:{
-                      display:true,
-                      text:'Bitcoin Price Index of 2020 (USD$)',
-                      fontSize:20
-                    }
-                   
-                  }}   ></Line>
+                    options={{
+                        title: {
+                            display: true,
+                            text: 'Bitcoin Price Index of 2020 (USD$)',
+                            fontSize: 20
+                        }
+
+                    }}   ></Line>
             </div>
         )
     }
