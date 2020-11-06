@@ -1,0 +1,1 @@
+![Bitcoin-Chart](currency.png)
